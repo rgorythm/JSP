@@ -23,7 +23,7 @@ public class BoardDAO {
 	public BoardDAO() {
 		
 		try {
-			
+			// 커넥션풀?? servers - context.xml에 db정보입력해야 사용할수있어
 			Context context = new InitialContext();
 			ds = (DataSource)context.lookup("java:comp/env/jdbc/MySQLDB");
 			
@@ -45,6 +45,7 @@ public class BoardDAO {
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
+				//boardBean 꼭 반복문안에서 생성해야해
 				BoardBean boardBean = new BoardBean();
 				boardBean.setBoardNum(rs.getInt("num"));
 				boardBean.setBoardSubject(rs.getString("subject"));

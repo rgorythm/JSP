@@ -14,9 +14,11 @@ public class test4 extends HttpServlet {
 	protected void doTest4(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String contextPath = request.getContextPath();
+		//BoardCRUD
 		String uri = request.getRequestURI();
+		//BoardCRUD/boardList.test4
 		String requestName = uri.substring(contextPath.length());
-
+		//BoardCRUD/boardList.test4 에서 BoardCRUD를뗀것같음
 		if(requestName.equals("/boardList.test4")) {
 			System.out.println(requestName);
 			BoardService boardService = new BoardService();
