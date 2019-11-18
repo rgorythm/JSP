@@ -41,11 +41,14 @@ public class HomeController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/goCheck", method = RequestMethod.POST)
-	public Boolean idCheck(HttpServletRequest request) {
-		Boolean check = service.checkID(request);
-		System.out.println(check);
+	public Boolean idCheck(UserVO userVO) {
+	/*	Boolean check = service.checkID(userVO);
 		System.out.println(request.getParameter("userID"));
-		return check;
+		System.out.println(check);
+		System.out.println(request.getParameter("userID"));*/
+		System.out.println(userVO.getUserID());
+		boolean momy = false;
+		return momy;
 	}
 	
 }
