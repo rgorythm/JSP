@@ -14,7 +14,19 @@ public class Service {
 		return userList;
 		
 	}
-	
+	/*
+	 	List<Integer> userIDs
+	 		for(int i : userIDs){
+	 			int userID = i;
+	 			}
+	 			
+	 			
+	 			
+	 	int[] userIDs
+	 		for(int i=0; i<userID.length??; i++){
+	 			int userID = userIDs [i];
+	 		}
+	 */
 	public int usersDelete(List<String> userIDs) {
 		//이터레이터 쓰는거좀 봐라 ㅡㅡ 아직도 못써서 우야노
 		Iterator<String> iter = userIDs.iterator();
